@@ -1,15 +1,21 @@
 const repeatString = function(string, num) {
    
-let printthis = string
+if (num > -1){
+        let printthis = ""
+        while (num > 0){
+            printthis += string
 
-while (num > 1){
-    printthis += string
 
-
-num--
+        num--
+        }
+        return printthis
 }
-
+    
+else { let printthis = "ERROR"
 return printthis
+}
+    
+
 
 };
 
