@@ -9,52 +9,42 @@ const subtract = function(a, b) {
   return difference
 };
 
-const sum = function(myArray) {
-
-  let n = 0;
-  let x = 0;
-  
-  while (myArray.length > 0) {
-    
-    n = myArray.pop()
-    x += n;
-  }
-  
-  return x
+const sum = function(array) {
+  return array.reduce((sum, current) => sum + current, 0)
    
+
 	
 };
 
 
 
-const multiply = function(array1) {
-  let n = 0;
-  let x = 1;
+const multiply = function(array) {
+  return array.reduce((product, current) => product * current, 1)
+
+
+};
+
+const power = function(num, power){
   
-  while (array1.length > 0) {
-    
-    n = array1.pop()
-    x = x * n;
+  let square = 1
+  for (let i = 1; i <= power; i++){
+  square =  square * num
   }
+  return square
+}
+
+
+
+const factorial = function(num){
   
-  return x
-
-};
-
-const power = function(a, b) {
-  let root = 1
-  for (let i = 1; i < b + 1; i++){
-    root = root * a
+  let holder = 1
+  for (let i = 1 ; i < num +1 ; i++){
+  holder =  holder * i
   }
-return root
-
+  return holder
+}
 	
-};
 
-const factorial = function() {
-  
-	
-};
 
 // Do not edit below this line
 module.exports = {
